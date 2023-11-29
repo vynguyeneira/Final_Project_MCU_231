@@ -88,4 +88,18 @@ extern int GREEN_time;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #endif /* INC_F_GLOBAL_H_ */

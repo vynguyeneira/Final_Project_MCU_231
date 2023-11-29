@@ -1,0 +1,50 @@
+/*
+ * f.global.h
+ *
+ *  Created on: Nov 30, 2023
+ *      Author: Vy Nguyen
+ */
+
+#ifndef INC_F_GLOBAL_H_
+#define INC_F_GLOBAL_H_
+
+/*
+ * Define global Variables
+ */
+
+extern int timer_cycle;
+extern int timer_for_key_pressed;
+extern int mode;
+
+extern int RED_time;
+extern int YELLOW_time;
+extern int GREEN_time;
+
+/*
+ * Define for AUTO MODE
+ */
+
+#define INIT			0
+#define AUTO_MODE		1
+#define AUTO_RED		2
+#define AUTO_YELLOW		3
+#define AUTO_GREEN		4
+
+/*
+ * Define for MANUAL MODE
+ */
+#define MANU_MODE		5
+#define MANU_RED		6
+#define MANU_YELLOW		7
+#define MANU_GREEN		8
+
+/*
+ * Define for TUNING MODE
+ */
+
+
+
+
+
+
+#endif /* INC_F_GLOBAL_H_ */
