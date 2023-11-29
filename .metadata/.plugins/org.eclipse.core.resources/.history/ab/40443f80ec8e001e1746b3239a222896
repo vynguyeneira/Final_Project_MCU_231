@@ -33,14 +33,8 @@ extern "C" {
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "f_button.h"
-#include "f_global.h"
-#include "f_timer.h"
-#include "f_display_LED.h"
-#include "f_uart.h"
-#include "fsm_auto_mode.h"
-#include "fsm_manual_mode.h"
-#include "fsm_pedestrian_mode.h"
-#include "fsm_tuning_mode.h"
+#include <f_global.h>
+#include "f.timer.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
