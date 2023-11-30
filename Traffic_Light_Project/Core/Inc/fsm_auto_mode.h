@@ -8,6 +8,6 @@
 #ifndef INC_FSM_AUTO_MODE_H_
 #define INC_FSM_AUTO_MODE_H_
 
-
+void fsmAutoModeRun();
 
 #endif /* INC_FSM_AUTO_MODE_H_ */

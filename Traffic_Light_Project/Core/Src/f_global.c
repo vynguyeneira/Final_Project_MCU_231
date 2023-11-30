@@ -10,7 +10,7 @@
 int timer_cycle = 1;
 int timer_for_key_pressed = 1000;
 
-int mode = MODE_INT;
+int mode = INIT;
 
 int RED_time = 5000;
 int GREEN_time = 3000;
