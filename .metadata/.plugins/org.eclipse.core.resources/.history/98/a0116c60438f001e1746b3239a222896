@@ -124,8 +124,7 @@ void displayLeds()
 	}
 }
 
-void resetLight()
-{
-	horizontal_state = INIT;
-	vertical_state = INIT;
-}
+
+
+
+void resetLight();

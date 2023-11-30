@@ -1,0 +1,25 @@
+/*
+ * f_display_LED.c
+ *
+ *  Created on: Nov 30, 2023
+ *      Author: Vy Nguyen
+ */
+
+
+#include "f_display_LED.h"
+#include "f_timer.h"
+
+int horizontal_state = INIT;
+int vertical_state = INIT;
+
+void fsmHorLeds()
+{
+	switch (horizontal_state) {
+		case INIT:
+			horizontal_state = AUTO_RED;
+			setTimer(0, RED_time);
+			break;
+		default:
+			break;
+	}
+}
