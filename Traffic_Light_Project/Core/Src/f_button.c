@@ -74,10 +74,10 @@ void getKeyInput()
 				key_reg[button][2] = HAL_GPIO_ReadPin(BUTTON_INC_GPIO_Port, BUTTON_INC_Pin);
 				break;
 			case BUTTON_PED_HOR:
-				key_reg[button][2] = HAL_GPIO_ReadPin(BUTTON_PED_GPIO_Port, BUTTON_PED_Pin);
+				key_reg[button][2] = HAL_GPIO_ReadPin(BUTTON_PED_HOR_GPIO_Port, BUTTON_PED_HOR_Pin);
 				break;
 			case BUTTON_PED_VER:
-				key_reg[button][2] = HAL_GPIO_ReadPin(BUTTON_PED_GPIO_Port, BUTTON_PED_Pin);
+				key_reg[button][2] = HAL_GPIO_ReadPin(BUTTON_PED_VER_GPIO_Port, BUTTON_PED_VER_Pin);
 				break;
 			default:
 				break;

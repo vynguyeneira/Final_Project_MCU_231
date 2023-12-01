@@ -53,6 +53,13 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_TIM3_Init(void);
+void testIO()
+{
+	if (isButtonPressed(BUTTON_PED_HOR))
+	{
+		HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+	}
+}
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -98,8 +105,10 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  HAL_TIM_Base_Start_IT(&htim3);
   while (1)
   {
+	  testIO();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -263,14 +272,14 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOB, LED_RED_P2_Pin|LED_RED_P1_Pin|LED_GREEN_1_Pin|LED_GREEN_2_Pin
                           |LED_RED_2_Pin|LED_YELLOW_2_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : B1_Pin */
-  GPIO_InitStruct.Pin = B1_Pin;
+  /*Configure GPIO pin : BUTTON_PED_HOR_Pin */
+  GPIO_InitStruct.Pin = BUTTON_PED_HOR_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(BUTTON_PED_HOR_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : BUTTON_PED_Pin BUTTON_MODE_Pin BUTTON_SET_Pin */
-  GPIO_InitStruct.Pin = BUTTON_PED_Pin|BUTTON_MODE_Pin|BUTTON_SET_Pin;
+  /*Configure GPIO pins : BUTTON_PED_VER_Pin BUTTON_MODE_Pin BUTTON_SET_Pin */
+  GPIO_InitStruct.Pin = BUTTON_PED_VER_Pin|BUTTON_MODE_Pin|BUTTON_SET_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
@@ -306,7 +315,10 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	getKeyInput();
+}
 /* USER CODE END 4 */
 
 /**
