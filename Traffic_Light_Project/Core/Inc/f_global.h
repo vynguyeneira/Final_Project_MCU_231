@@ -48,11 +48,12 @@ extern int GREEN_time;
 /*
  * Define for PEDESTRIAN MODE
  */
-#define PED_OFF			12
-#define PED_ON			13
-#define WALK_STOP		14
-#define WALK_NOT_START	15
-#define WALK_ALLOW		16
+#define PED_OFF					12
+#define PED_ON					13
+#define WALK_ALLOW				14
+#define BUZZER_LOUDER			15
+#define WALK_STOP				16
+#define PED_LED_TOGGLE_DURATION	500
 
 /*
  * Define for LEDs
@@ -63,8 +64,13 @@ extern int GREEN_time;
 /*
  * Define for Buzzer
  */
-#define BUZZER_time		500
-#define BUZZER_pul		550
+#define BUZZER_time_allow		1000
+#define BUZZER_time_stop		500
+#define BUZZER_pul_allow		450
+#define BUZZER_pul_stop			950
+#define BUZZER_OFF				0
+#define BUZZER_ON				1
+#define TIME_LEFT_FOR_LOUDER	5000
 
 /*
  * Define for Timer
@@ -76,12 +82,13 @@ extern int GREEN_time;
 /*
  * Define for Button
  */
-#define NUM_OF_BUTTONS	4
+#define NUM_OF_BUTTONS	5
 
 #define BUTTON_MODE		0
 #define BUTTON_SET		1
 #define BUTTON_INC		2
-#define BUTTON_PED		3
+#define BUTTON_PED_VER	3
+#define BUTTON_PED_HOR	4
 
 #define NORMAL_STATE	SET
 #define PRESSED_STATE	RESET
