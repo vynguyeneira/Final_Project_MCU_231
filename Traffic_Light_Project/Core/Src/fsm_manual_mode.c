@@ -33,12 +33,12 @@ void fsmManualModeRun()
 			if(isButtonPressed(BUTTON_MODE))
 			{
 				mode = INC_RED;
-				// something
+				time_count = RED_time / 1000;
 			}
 			break;
 
 		case MANU_GREEN:
-			// Turn on red lights
+			// Turn on green lights
 			HAL_GPIO_WritePin(LED_RED_1_GPIO_Port, LED_RED_1_Pin, LED_OFF);
 			HAL_GPIO_WritePin(LED_GREEN_1_GPIO_Port, LED_GREEN_1_Pin, LED_ON);
 
@@ -56,12 +56,12 @@ void fsmManualModeRun()
 			if(isButtonPressed(BUTTON_MODE))
 			{
 				mode = INC_GREEN;
-				// something
+				time_count = GREEN_time / 1000;
 			}
 			break;
 
 		case MANU_YELLOW:
-			// Turn on red lights
+			// Turn on yellow lights
 			HAL_GPIO_WritePin(LED_RED_1_GPIO_Port, LED_RED_1_Pin, LED_ON);
 			HAL_GPIO_WritePin(LED_GREEN_1_GPIO_Port, LED_GREEN_1_Pin, LED_ON);
 
@@ -79,7 +79,7 @@ void fsmManualModeRun()
 			if(isButtonPressed(BUTTON_MODE))
 			{
 				mode = INC_YELLOW;
-				// something
+				time_count = YELLOW_time / 1000;
 			}
 			break;
 
