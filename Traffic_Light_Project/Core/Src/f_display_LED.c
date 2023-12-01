@@ -7,8 +7,6 @@
 
 
 #include "f_display_LED.h"
-#include "f_timer.h"
-#include "main.h"
 
 int horizontal_state = INIT;
 int vertical_state = INIT;

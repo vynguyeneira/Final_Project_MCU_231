@@ -7,7 +7,6 @@
 
 
 #include "f_timer.h"
-#include "f_global.h"
 
 int timer_counter[NUM_OF_TIMER];
 int timer_flag[NUM_OF_TIMER];

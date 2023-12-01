@@ -1,0 +1,7 @@
+f_button.c:16:5:isButtonPressed	16	static
+f_button.c:27:5:isButtonLongPressed	16	static
+f_button.c:38:6:subKeyProcess	16	static
+f_button.c:43:6:subKeyLongProcess	16	static
+f_button.c:48:6:resetKey	16	static
+f_button.c:54:6:setKeyTimer	16	static
+f_button.c:59:6:getKeyInput	16	static

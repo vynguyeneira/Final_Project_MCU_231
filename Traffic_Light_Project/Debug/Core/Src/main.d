@@ -24,8 +24,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Core/Inc/f_button.h ../Core/Inc/f_global.h ../Core/Inc/f_timer.h \
- ../Core/Inc/f_display_LED.h ../Core/Inc/f_uart.h \
+ ../Core/Inc/f_button.h ../Core/Inc/f_global.h ../Core/Inc/main.h \
+ ../Core/Inc/f_timer.h ../Core/Inc/f_display_LED.h ../Core/Inc/f_uart.h \
  ../Core/Inc/fsm_auto_mode.h ../Core/Inc/fsm_manual_mode.h \
  ../Core/Inc/fsm_pedestrian_mode.h ../Core/Inc/fsm_tuning_mode.h
 
@@ -84,6 +84,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/f_button.h:
 
 ../Core/Inc/f_global.h:
+
+../Core/Inc/main.h:
 
 ../Core/Inc/f_timer.h:
 

@@ -9,6 +9,8 @@
 #define INC_F_DISPLAY_LED_H_
 
 #include "f_global.h"
+#include "f_timer.h"
+#include "main.h"
 
 extern int horizontal_state;
 extern int vertical_state;

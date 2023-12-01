@@ -8,6 +8,8 @@
 #ifndef INC_F_TIMER_H_
 #define INC_F_TIMER_H_
 
+#include "f_global.h"
+
 int currentCounter(int timer);
 int isTimerUp(int Timer);
 void setTimer(int timer, int duration);

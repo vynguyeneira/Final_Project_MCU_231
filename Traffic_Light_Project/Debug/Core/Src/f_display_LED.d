@@ -1,6 +1,6 @@
 Core/Src/f_display_LED.o: ../Core/Src/f_display_LED.c \
- ../Core/Inc/f_display_LED.h ../Core/Inc/f_global.h ../Core/Inc/f_timer.h \
- ../Core/Inc/main.h ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
+ ../Core/Inc/f_display_LED.h ../Core/Inc/f_global.h ../Core/Inc/main.h \
+ ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h \
  ../Core/Inc/stm32f1xx_hal_conf.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h \
@@ -33,8 +33,6 @@ Core/Src/f_display_LED.o: ../Core/Src/f_display_LED.c \
 ../Core/Inc/f_display_LED.h:
 
 ../Core/Inc/f_global.h:
-
-../Core/Inc/f_timer.h:
 
 ../Core/Inc/main.h:
 

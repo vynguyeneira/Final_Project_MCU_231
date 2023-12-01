@@ -1,0 +1,29 @@
+/*
+ * fsm_auto_mode.c
+ *
+ *  Created on: Nov 30, 2023
+ *      Author: Vy Nguyen
+ */
+
+
+#include "fsm_auto_mode.h"
+
+void fsmAutoModeRun()
+{
+	switch (mode) {
+		case INIT:
+			mode = AUTO_MODE;
+			resetLight();
+			break;
+		case AUTO_MODE:
+			if (isButtonPressed(BUTTON_MODE))
+			{
+				mode = MANU_MODE;
+			}
+
+			displayLeds();
+			break;
+		default:
+			break;
+	}
+}

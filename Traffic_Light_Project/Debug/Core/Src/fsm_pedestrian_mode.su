@@ -1,0 +1,3 @@
+fsm_pedestrian_mode.c:20:6:fsmVerPedRun	8	static
+fsm_pedestrian_mode.c:85:6:fsmHorPedRun	8	static
+fsm_pedestrian_mode.c:150:6:fsmPedestrianModeRun	8	static
