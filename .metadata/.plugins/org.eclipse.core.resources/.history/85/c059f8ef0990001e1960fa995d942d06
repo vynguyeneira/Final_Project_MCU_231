@@ -56,13 +56,7 @@ void setKeyTimer(int button)
 	counter_for_key_pressed[button] = timer_for_key_pressed / timer_cycle;
 }
 
-void getKeyInput()
-{
-	for (int button = 0; button < NUM_OF_BUTTONS; button++)
-	{
 
-	}
-}
 
 
 
