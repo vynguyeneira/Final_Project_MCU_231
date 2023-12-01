@@ -12,6 +12,6 @@ int timer_for_key_pressed = 1000;
 
 int mode = INIT;
 
-int RED_time = 5000;
-int GREEN_time = 3000;
-int YELLOW_time = 2000;
+int RED_time = 10000;
+int GREEN_time = 7000;
+int YELLOW_time = 3000;

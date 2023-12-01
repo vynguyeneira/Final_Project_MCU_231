@@ -7,7 +7,9 @@
 
 #include "fsm_tuning_mode.h"
 
-void fsmTuningRunMode()
+int time_count = 0;
+
+void fsmTuningModeRun()
 {
 	switch (mode)
 	{

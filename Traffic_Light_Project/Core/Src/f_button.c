@@ -111,6 +111,14 @@ void getKeyInput()
 	}
 }
 
+void fsmButtonRun()
+{
+	if (isTimerUp(7))
+	{
+		setTimer(7, BUTTON_TIME_STEP);
+		getKeyInput();
+	}
+}
 
 
 

@@ -15,5 +15,4 @@ extern int time_count;
 
 void fsmTuningModeRun();
 
-
 #endif /* INC_FSM_TUNING_MODE_H_ */

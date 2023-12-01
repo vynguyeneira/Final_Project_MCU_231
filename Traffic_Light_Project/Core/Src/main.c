@@ -121,9 +121,20 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   HAL_TIM_Base_Start_IT(&htim3);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
+
+  setTimer(6, UART_TIME_STEP);
+  setTimer(7, BUTTON_TIME_STEP);
   while (1)
   {
-	  testIO();
+	  fsmAutoModeRun();
+	  fsmManualModeRun();
+	  fsmTuningModeRun();
+	  fsmPedestrianModeRun();
+	  fsmUARTRun();
+	  fsmButtonRun();
+//	  testIO();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -327,9 +338,10 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+uint8_t buttonCounter = 10;
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-	getKeyInput();
+	timerRun();
 }
 /* USER CODE END 4 */
 

@@ -11,9 +11,8 @@
 #include "f_global.h"
 #include "main.h"
 
-
 int isButtonPressed (int button);
 int isButtonLongPressed (int button);
-void getKeyInput();
+void fsmButtonRun();
 
 #endif /* INC_F_BUTTON_H_ */

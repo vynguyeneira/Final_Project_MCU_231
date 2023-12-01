@@ -10,6 +10,7 @@
 
 #include "f_global.h"
 #include "main.h"
+#include "fsm_tuning_mode.h"
 
 void fsmManualModeRun();
 

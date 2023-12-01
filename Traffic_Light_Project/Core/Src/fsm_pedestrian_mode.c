@@ -20,7 +20,7 @@ int ver_buzzer_state = BUZZER_OFF;
 void fsmVerPedRun(){
 	switch (ver_ped) {
 		case PED_OFF:
-			if (isButtonPressed(BUTTON_PED_VER)) {
+			if (isButtonPressed(BUTTON_PED_VER) && mode == AUTO_MODE) {
 				ver_ped = PED_ON;
 			}
 			break;
@@ -85,7 +85,7 @@ void fsmVerPedRun(){
 void fsmHorPedRun(){
 	switch (hor_ped) {
 		case PED_OFF:
-			if (isButtonPressed(BUTTON_PED_HOR)) {
+			if (isButtonPressed(BUTTON_PED_HOR) && mode == AUTO_MODE) {
 				hor_ped = PED_ON;
 			}
 			break;

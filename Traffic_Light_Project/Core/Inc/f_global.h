@@ -60,8 +60,8 @@ extern int GREEN_time;
 /*
  * Define for LEDs
  */
-#define LED_ON		GPIO_PIN_SET
-#define LED_OFF		GPIO_PIN_RESET
+#define LED_ON		GPIO_PIN_RESET
+#define LED_OFF		GPIO_PIN_SET
 
 /*
  * Define for Buzzer
@@ -81,19 +81,21 @@ extern int GREEN_time;
  * Timer4 for pedestrian horizontal LED toggling
  * Timer5 for pedestrian horizontal LED toggling
  * Timer6 for UART transmitting
+ * Timer7 for buttons reading
  */
-#define NUM_OF_TIMER	7
+#define NUM_OF_TIMER	8
 
 /*
  * Define for Button
  */
-#define NUM_OF_BUTTONS	5
+#define NUM_OF_BUTTONS		5
 
-#define BUTTON_MODE		0
-#define BUTTON_SET		1
-#define BUTTON_INC		2
-#define BUTTON_PED_VER	3
-#define BUTTON_PED_HOR	4
+#define BUTTON_MODE			0
+#define BUTTON_SET			1
+#define BUTTON_INC			2
+#define BUTTON_PED_VER		3
+#define BUTTON_PED_HOR		4
+#define BUTTON_TIME_STEP	10
 
 #define NORMAL_STATE	GPIO_PIN_SET
 #define PRESSED_STATE	GPIO_PIN_RESET
