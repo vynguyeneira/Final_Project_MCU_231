@@ -36,7 +36,7 @@ void fsmHorLeds()
 			if(isTimerUp(0))
 			{
 				horizontal_state = AUTO_RED;
-				setTimer(0, RED_time);
+				setTimer(0, YELLOW_time);
 			}
 			break;
 		default:
