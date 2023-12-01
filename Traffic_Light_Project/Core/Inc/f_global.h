@@ -8,6 +8,8 @@
 #ifndef INC_F_GLOBAL_H_
 #define INC_F_GLOBAL_H_
 
+#include "main.h"
+
 /*
  * Define global Variables
  */
@@ -58,8 +60,8 @@ extern int GREEN_time;
 /*
  * Define for LEDs
  */
-#define LED_ON		SET
-#define LED_OFF		RESET
+#define LED_ON		GPIO_PIN_SET
+#define LED_OFF		GPIO_PIN_RESET
 
 /*
  * Define for Buzzer
@@ -90,8 +92,8 @@ extern int GREEN_time;
 #define BUTTON_PED_VER	3
 #define BUTTON_PED_HOR	4
 
-#define NORMAL_STATE	SET
-#define PRESSED_STATE	RESET
+#define NORMAL_STATE	GPIO_PIN_SET
+#define PRESSED_STATE	GPIO_PIN_RESET
 
 
 
