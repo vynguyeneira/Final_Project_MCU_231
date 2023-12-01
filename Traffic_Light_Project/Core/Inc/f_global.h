@@ -78,8 +78,11 @@ extern int GREEN_time;
  * Define for Timer
  * Timer0 for horizontal LEDs, Timer1 for vertical LEDs,
  * Timer2 for horizontal buzzer, Timer3 for vertical buzzer
+ * Timer4 for pedestrian horizontal LED toggling
+ * Timer5 for pedestrian horizontal LED toggling
+ * Timer6 for UART transmitting
  */
-#define NUM_OF_TIMER	4
+#define NUM_OF_TIMER	7
 
 /*
  * Define for Button
@@ -95,6 +98,9 @@ extern int GREEN_time;
 #define NORMAL_STATE	GPIO_PIN_SET
 #define PRESSED_STATE	GPIO_PIN_RESET
 
-
+/*
+ * Define for UART
+ */
+#define UART_TIME_STEP 1000
 
 #endif /* INC_F_GLOBAL_H_ */

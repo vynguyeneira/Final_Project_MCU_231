@@ -95,6 +95,8 @@ void Error_Handler(void);
 #define LED_GREEN_P2_GPIO_Port GPIOA
 #define LED_RED_1_Pin GPIO_PIN_10
 #define LED_RED_1_GPIO_Port GPIOA
+#define LED_YELLOW_1_Pin GPIO_PIN_11
+#define LED_YELLOW_1_GPIO_Port GPIOA
 #define TMS_Pin GPIO_PIN_13
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14
@@ -105,6 +107,8 @@ void Error_Handler(void);
 #define LED_GREEN_2_GPIO_Port GPIOB
 #define LED_RED_2_Pin GPIO_PIN_5
 #define LED_RED_2_GPIO_Port GPIOB
+#define LED_YELLOW_2_Pin GPIO_PIN_6
+#define LED_YELLOW_2_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
