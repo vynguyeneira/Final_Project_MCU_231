@@ -13,6 +13,6 @@
 
 int isButtonPressed (int button);
 int isButtonLongPressed (int button);
-void fsmButtonRun();
+void buttonProcessing();
 
 #endif /* INC_F_BUTTON_H_ */

@@ -124,7 +124,6 @@ int main(void)
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
 
-  setTimer(6, UART_TIME_STEP);
   setTimer(7, BUTTON_TIME_STEP);
   while (1)
   {
@@ -132,8 +131,8 @@ int main(void)
 	  fsmManualModeRun();
 	  fsmTuningModeRun();
 	  fsmPedestrianModeRun();
-	  fsmUARTRun();
-	  fsmButtonRun();
+	  uartProcessing();
+	  buttonProcessing();
 //	  testIO();
     /* USER CODE END WHILE */
 
@@ -297,12 +296,6 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOB, LED_RED_P2_Pin|LED_GREEN_P2_Pin|LED_RED_1_Pin|LED_RED_2_Pin
                           |LED_YELLOW_2_Pin|LED_GREEN_2_Pin|LED_YELLOW_1_Pin|LED_GREEN_1_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : BUTTON_PED_HOR_Pin */
-  GPIO_InitStruct.Pin = BUTTON_PED_HOR_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(BUTTON_PED_HOR_GPIO_Port, &GPIO_InitStruct);
-
   /*Configure GPIO pins : LD2_Pin LED_GREEN_P1_Pin LED_RED_P1_Pin */
   GPIO_InitStruct.Pin = LD2_Pin|LED_GREEN_P1_Pin|LED_RED_P1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -325,15 +318,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : BUTTON_PED_VER_Pin */
-  GPIO_InitStruct.Pin = BUTTON_PED_VER_Pin;
+  /*Configure GPIO pins : BUTTON_PED_VER_Pin BUTTON_PED_HOR_Pin */
+  GPIO_InitStruct.Pin = BUTTON_PED_VER_Pin|BUTTON_PED_HOR_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(BUTTON_PED_VER_GPIO_Port, &GPIO_InitStruct);
-
-  /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 }
 

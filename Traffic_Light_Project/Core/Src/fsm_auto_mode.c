@@ -15,6 +15,7 @@ void fsmAutoModeRun()
 		case INIT:
 			mode = AUTO_MODE;
 			resetLight();
+			setTimer(6, UART_TIME_STEP);
 			break;
 		case AUTO_MODE:
 // Switch to MANUAL MODE when press MODE button

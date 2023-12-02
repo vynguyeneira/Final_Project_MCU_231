@@ -111,7 +111,7 @@ void getKeyInput()
 	}
 }
 
-void fsmButtonRun()
+void buttonProcessing()
 {
 	if (isTimerUp(7))
 	{

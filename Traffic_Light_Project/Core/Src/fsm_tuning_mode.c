@@ -30,9 +30,9 @@ void fsmTuningModeRun()
 
 			// Increase the time duration of the red LEDs
 			//when INC button is pressed or long pressed
-			if (isButtonLongPressed(BUTTON_INC) || isButtonLongPressed(BUTTON_INC))
+			if (isButtonPressed(BUTTON_INC) || isButtonLongPressed(BUTTON_INC))
 			{
-				if (time_count >= 99) time_count = 5;
+				if (time_count >= 99) time_count = 1;
 				else time_count++;
 			}
 			break;
@@ -52,11 +52,11 @@ void fsmTuningModeRun()
 				GREEN_time = time_count * 1000;
 			}
 
-			if (isButtonLongPressed(BUTTON_INC) || isButtonLongPressed(BUTTON_INC))
+			if (isButtonPressed(BUTTON_INC) || isButtonLongPressed(BUTTON_INC))
 			{
 				// Increase the time duration of the green LEDs
 				//when INC button is pressed or long pressed
-				if (time_count >= 79) time_count = 3;
+				if (time_count >= 79) time_count = 1;
 				else time_count++;
 			}
 			break;
@@ -76,11 +76,11 @@ void fsmTuningModeRun()
 						YELLOW_time = time_count * 1000;
 					}
 
-					if (isButtonLongPressed(BUTTON_INC) || isButtonLongPressed(BUTTON_INC))
+					if (isButtonPressed(BUTTON_INC) || isButtonLongPressed(BUTTON_INC))
 					{
 						// Increase the time duration of the yellow LEDs
 						//when INC button is pressed or long pressed
-						if (time_count >= 10) time_count = 2;
+						if (time_count >= 10) time_count = 1;
 						else time_count++;
 					}
 					break;

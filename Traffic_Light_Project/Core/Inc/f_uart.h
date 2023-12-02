@@ -14,7 +14,7 @@
 
 extern UART_HandleTypeDef huart2;
 
-void uartTransmit7SEG(int);
-void fsmUARTRun();
+void uartTransmit7SEG(uint8_t);
+void uartProcessing();
 
 #endif /* INC_F_UART_H_ */

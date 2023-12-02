@@ -22,21 +22,21 @@ void fsmHorLeds()
 			if (isTimerUp(0))
 			{
 				horizontal_state = AUTO_GREEN;
-				setTimer(0, RED_time);
+				setTimer(0, GREEN_time);
 			}
 			break;
 		case AUTO_GREEN:
 			if(isTimerUp(0))
 			{
 				horizontal_state = AUTO_YELLOW;
-				setTimer(0, GREEN_time);
+				setTimer(0, YELLOW_time);
 			}
 			break;
 		case AUTO_YELLOW:
 			if(isTimerUp(0))
 			{
 				horizontal_state = AUTO_RED;
-				setTimer(0, YELLOW_time);
+				setTimer(0, RED_time);
 			}
 			break;
 		default:
