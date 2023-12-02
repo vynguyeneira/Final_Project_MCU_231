@@ -42,7 +42,7 @@ void fsmVerPedRun(){
 				default:
 					break;
 			}
-			if (isButtonPressed(BUTTON_MODE)) {
+			if (mode != AUTO_MODE) {
 				ver_ped = PED_OFF;
 			}
 			break;
@@ -53,7 +53,7 @@ void fsmVerPedRun(){
 				ver_buzzer_state = BUZZER_ON;
 				ver_ped = WALK_ALLOW;
 			}
-			if (isButtonPressed(BUTTON_MODE)) {
+			if (mode != AUTO_MODE) {
 				ver_ped = PED_OFF;
 			}
 			break;
@@ -67,12 +67,12 @@ void fsmVerPedRun(){
 				ver_buzzer_state = BUZZER_ON;
 				ver_ped = BUZZER_LOUDER;
 			}
-			if (isButtonPressed(BUTTON_MODE)) {
+			if (mode != AUTO_MODE) {
 				ver_ped = PED_OFF;
 			}
 			break;
 		case BUZZER_LOUDER:
-			if (vertical_state == AUTO_GREEN || isButtonPressed(BUTTON_MODE)) {
+			if (vertical_state == AUTO_GREEN || mode != AUTO_MODE) {
 				ver_ped = PED_OFF;
 			}
 			break;
@@ -107,7 +107,7 @@ void fsmHorPedRun(){
 				default:
 					break;
 			}
-			if (isButtonPressed(BUTTON_MODE)) {
+			if (mode != AUTO_MODE) {
 				hor_ped = PED_OFF;
 			}
 			break;
@@ -118,7 +118,7 @@ void fsmHorPedRun(){
 				hor_buzzer_state = BUZZER_ON;
 				hor_ped = WALK_ALLOW;
 			}
-			if (isButtonPressed(BUTTON_MODE)) {
+			if (mode != AUTO_MODE) {
 				hor_ped = PED_OFF;
 			}
 			break;
@@ -132,12 +132,12 @@ void fsmHorPedRun(){
 				hor_buzzer_state = BUZZER_ON;
 				hor_ped = BUZZER_LOUDER;
 			}
-			if (isButtonPressed(BUTTON_MODE)) {
+			if (mode != AUTO_MODE) {
 				hor_ped = PED_OFF;
 			}
 			break;
 		case BUZZER_LOUDER:
-			if (isButtonPressed(BUTTON_MODE) || horizontal_state == AUTO_GREEN) {
+			if (mode != AUTO_MODE || horizontal_state == AUTO_GREEN) {
 				hor_ped = PED_OFF;
 			}
 			break;
