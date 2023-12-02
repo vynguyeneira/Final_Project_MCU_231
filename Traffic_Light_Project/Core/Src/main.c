@@ -77,6 +77,26 @@ void testIO()
 		HAL_GPIO_TogglePin(LED_GREEN_P1_GPIO_Port, LED_GREEN_P1_Pin);
 	}
 }
+
+void testBuzzer()
+{
+//	for (int i = 500; i < 1000; i += 100)
+//	{
+//		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 500);
+//		HAL_Delay(1000);
+//		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 0);
+//		HAL_Delay(1000);
+//		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 600);
+//		HAL_Delay(1000);
+//		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 0);
+//		HAL_Delay(1000);
+//		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 800);
+//		HAL_Delay(1000);
+//		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 0);
+//		HAL_Delay(1000);
+//	}
+//	for (int i = 999; i >)
+}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -127,6 +147,7 @@ int main(void)
   setTimer(7, BUTTON_TIME_STEP);
   while (1)
   {
+//	  testBuzzer();
 	  fsmAutoModeRun();
 	  fsmManualModeRun();
 	  fsmTuningModeRun();

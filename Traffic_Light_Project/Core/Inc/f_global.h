@@ -68,8 +68,8 @@ extern int GREEN_time;
  */
 #define BUZZER_time_allow		1000
 #define BUZZER_time_stop		500
-#define BUZZER_pul_allow		450
-#define BUZZER_pul_stop			950
+#define BUZZER_pul_allow		300
+#define BUZZER_pul_stop			900
 #define BUZZER_OFF				0
 #define BUZZER_ON				1
 #define TIME_LEFT_FOR_LOUDER	5000

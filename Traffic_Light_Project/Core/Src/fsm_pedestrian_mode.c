@@ -127,7 +127,7 @@ void fsmHorPedRun(){
 				setTimer(4, PED_LED_TOGGLE_DURATION);
 				hor_buzzer_time = BUZZER_time_allow - 200;
 				setTimer(2, hor_buzzer_time);
-				hor_pul = BUZZER_pul_allow +  100;
+				hor_pul = BUZZER_pul_allow + 100;
 				__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_1, hor_pul);
 				hor_buzzer_state = BUZZER_ON;
 				hor_ped = BUZZER_LOUDER;
