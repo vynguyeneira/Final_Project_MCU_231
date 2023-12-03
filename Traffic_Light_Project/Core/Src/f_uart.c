@@ -10,16 +10,19 @@
 
 int save_time_count = -1;
 
-void uartTransmit7SEG(uint8_t counter) {
+void uartTransmit7SEG(uint8_t counter)
+{
 	char str[50];
 	sprintf(str, "!7SEG:%02d#", counter);
 	uint8_t str_len = (uint8_t)strlen(str);
-	for (uint8_t i = 0; i < str_len; ++i) {
+	for (uint8_t i = 0; i < str_len; ++i)
+	{
 		HAL_UART_Transmit(&huart2, (uint8_t*)(str + i), 1, 50);
 	}
 }
 
-void uartProcessing() {
+void uartProcessing()
+{
 	// The receiving application only accept message of the form "!7SEG:xx#
 	switch (mode)
 	{

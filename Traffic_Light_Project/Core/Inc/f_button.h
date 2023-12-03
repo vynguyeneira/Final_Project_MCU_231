@@ -14,5 +14,7 @@
 int isButtonPressed (int button);
 int isButtonLongPressed (int button);
 void buttonProcessing();
+void fsmButtonReset(int button);
+void fsmButtonRun(int button);
 
 #endif /* INC_F_BUTTON_H_ */

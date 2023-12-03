@@ -80,22 +80,21 @@ void testIO()
 
 void testBuzzer()
 {
-//	for (int i = 500; i < 1000; i += 100)
-//	{
-//		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 500);
-//		HAL_Delay(1000);
-//		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 0);
-//		HAL_Delay(1000);
-//		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 600);
-//		HAL_Delay(1000);
-//		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 0);
-//		HAL_Delay(1000);
-//		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 800);
-//		HAL_Delay(1000);
-//		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 0);
-//		HAL_Delay(1000);
-//	}
-//	for (int i = 999; i >)
+	for (int i = 500; i < 1000; i += 100)
+	{
+		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 500);
+		HAL_Delay(1000);
+		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 0);
+		HAL_Delay(1000);
+		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 600);
+		HAL_Delay(1000);
+		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 0);
+		HAL_Delay(1000);
+		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 800);
+		HAL_Delay(1000);
+		__HAL_TIM_SetCompare(&htim3, TIM_CHANNEL_2, 0);
+		HAL_Delay(1000);
+	}
 }
 /* USER CODE END PFP */
 

@@ -82,8 +82,9 @@ extern int GREEN_time;
  * Timer5 for pedestrian horizontal LED toggling
  * Timer6 for UART transmitting
  * Timer7 for buttons reading
+ * Timer8 for button auto increment
  */
-#define NUM_OF_TIMER	8
+#define NUM_OF_TIMER	9
 
 /*
  * Define for Button
@@ -99,6 +100,13 @@ extern int GREEN_time;
 
 #define NORMAL_STATE	GPIO_PIN_SET
 #define PRESSED_STATE	GPIO_PIN_RESET
+
+#define BUTTON_PRESSED		0
+#define BUTTON_LONG_PRESSED	1
+#define BUTTON_RELEASED		2
+#define BUTTON_INIT			4
+
+#define BUTTON_AUTO_INC_TIME	100
 
 /*
  * Define for UART

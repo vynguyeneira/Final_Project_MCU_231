@@ -34,6 +34,7 @@ void fsmManualModeRun()
 
 			if(isButtonPressed(BUTTON_MODE))
 			{
+				fsmButtonReset(BUTTON_INC);
 				mode = INC_RED;
 				time_count = RED_time / 1000;
 			}
@@ -59,6 +60,7 @@ void fsmManualModeRun()
 
 			if(isButtonPressed(BUTTON_MODE))
 			{
+				fsmButtonReset(BUTTON_INC);
 				mode = INC_GREEN;
 				time_count = GREEN_time / 1000;
 			}
@@ -84,6 +86,7 @@ void fsmManualModeRun()
 
 			if(isButtonPressed(BUTTON_MODE))
 			{
+				fsmButtonReset(BUTTON_INC);
 				mode = INC_YELLOW;
 				time_count = YELLOW_time / 1000;
 			}

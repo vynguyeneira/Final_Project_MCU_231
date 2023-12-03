@@ -18,13 +18,13 @@ void fsmAutoModeRun()
 			setTimer(6, UART_TIME_STEP);
 			break;
 		case AUTO_MODE:
-// Switch to MANUAL MODE when press MODE button
+			// Switch to MANUAL MODE when press MODE button
 			if (isButtonPressed(BUTTON_MODE))
 			{
 				mode = MANU_MODE;
 			}
 
-// Display single LEDs according to the traffic rules
+			// Display single LEDs according to the traffic rules
 			displayLeds();
 			break;
 		default:
