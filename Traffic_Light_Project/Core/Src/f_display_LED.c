@@ -13,7 +13,8 @@ int vertical_state = INIT;
 
 void fsmHorLeds()
 {
-	switch (horizontal_state) {
+	switch (horizontal_state)
+	{
 		case INIT:
 			horizontal_state = AUTO_RED;
 			setTimer(0, RED_time);
@@ -46,7 +47,8 @@ void fsmHorLeds()
 
 void fsmVerLeds()
 {
-	switch (vertical_state) {
+	switch (vertical_state)
+	{
 		case INIT:
 			vertical_state = AUTO_GREEN;
 			setTimer(1, GREEN_time);
@@ -82,7 +84,8 @@ void displayLeds()
 	fsmHorLeds();
 	fsmVerLeds();
 
-	switch (horizontal_state) {
+	switch (horizontal_state)
+	{
 		case AUTO_RED:
 			HAL_GPIO_WritePin(LED_RED_1_GPIO_Port, LED_RED_1_Pin, LED_ON);
 			HAL_GPIO_WritePin(LED_GREEN_1_GPIO_Port, LED_GREEN_1_Pin, LED_OFF);
@@ -105,7 +108,8 @@ void displayLeds()
 			break;
 	}
 
-	switch (vertical_state) {
+	switch (vertical_state)
+	{
 		case AUTO_RED:
 			HAL_GPIO_WritePin(LED_RED_2_GPIO_Port, LED_RED_2_Pin, LED_ON);
 			HAL_GPIO_WritePin(LED_GREEN_2_GPIO_Port, LED_GREEN_2_Pin, LED_OFF);

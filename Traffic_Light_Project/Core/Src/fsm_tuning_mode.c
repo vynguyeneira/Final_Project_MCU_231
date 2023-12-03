@@ -29,12 +29,9 @@ void fsmTuningModeRun()
 			}
 
 			// Increase the time duration of the red LEDs
-			//when INC button is pressed or long pressed
-			if (isButtonPressed(BUTTON_INC) || isButtonLongPressed(BUTTON_INC))
-			{
-				if (time_count >= 99) time_count = 1;
-				else time_count++;
-			}
+			// when INC button is pressed or auto increased the red
+			// LEDs every 500ms if button is pressed longer than 1 second
+			fsmButtonRun(BUTTON_INC);
 			break;
 
 		case INC_GREEN:
@@ -52,38 +49,32 @@ void fsmTuningModeRun()
 				GREEN_time = time_count * 1000;
 			}
 
-			if (isButtonPressed(BUTTON_INC) || isButtonLongPressed(BUTTON_INC))
-			{
-				// Increase the time duration of the green LEDs
-				//when INC button is pressed or long pressed
-				if (time_count >= 79) time_count = 1;
-				else time_count++;
-			}
+			// Increase the time duration of the green LEDs
+			// when INC button is pressed or auto increased the green
+			// LEDs every 500ms if button is pressed longer than 1 second
+			fsmButtonRun(BUTTON_INC);
 			break;
 
 		case INC_YELLOW:
-					// Switch to AUTO MODE when press MODE button
-					if (isButtonPressed(BUTTON_MODE))
-					{
-						mode = AUTO_MODE;
-						resetLight();
-					}
+			// Switch to AUTO MODE when press MODE button
+			if (isButtonPressed(BUTTON_MODE))
+			{
+				mode = AUTO_MODE;
+				resetLight();
+			}
 
-					// Set the time duration of the yellow LEDs
-					//when press SET button
-					if(isButtonPressed(BUTTON_SET))
-					{
-						YELLOW_time = time_count * 1000;
-					}
+			// Set the time duration of the yellow LEDs
+			//when press SET button
+			if(isButtonPressed(BUTTON_SET))
+			{
+				YELLOW_time = time_count * 1000;
+			}
 
-					if (isButtonPressed(BUTTON_INC) || isButtonLongPressed(BUTTON_INC))
-					{
-						// Increase the time duration of the yellow LEDs
-						//when INC button is pressed or long pressed
-						if (time_count >= 10) time_count = 1;
-						else time_count++;
-					}
-					break;
+			// Increase the time duration of the red LEDs
+			// when INC button is pressed or auto increased the red
+			// LEDs every 500ms if button is pressed longer than 1 second
+			fsmButtonRun(BUTTON_INC);
+			break;
 
 		default:
 			break;
